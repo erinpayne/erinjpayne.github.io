@@ -1,15 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background: #ffffff;
-  color: #111;
+  font-family: 'Inter', sans-serif;
+  background: #0f1117;
+  color: #e5e7eb;
 }
+
+/* NAVIGATION */
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 3rem;
-  border-bottom: 1px solid #eee;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  position: sticky;
+  top: 0;
+  background: rgba(15,17,23,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1f2933;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 nav ul {
@@ -20,31 +39,71 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #111;
-  font-weight: 500;
+  color: #e5e7eb;
+  font-weight: 400;
+  position: relative;
 }
 
-nav a:hover {
-  border-bottom: 2px solid #111;
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: #6366f1;
+  transition: 0.3s;
 }
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
 
 .hero {
-  padding: 6rem 3rem 3rem;
+  padding: 7rem 4rem 4rem;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  color: #555;
+  font-size: 1.3rem;
+  color: #9ca3af;
 }
 
+/* CONTENT */
+
 .intro {
-  padding: 0 3rem 4rem;
-  max-width: 700px;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  padding: 0 4rem 5rem;
+  max-width: 800px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* HEADERS */
+
+h2 {
+  margin-top: 3rem;
+  color: #e5e7eb;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
