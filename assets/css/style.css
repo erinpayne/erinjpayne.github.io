@@ -91,8 +91,8 @@ h2 {
 /* PHOTO */
 .about-section {
   display: grid;
-  grid-template-columns: 1.7fr 1fr; /* Make text area wider */
-  gap: 2rem; /* Reduce the gap so image is closer to text */
+  grid-template-columns: 1.7fr 1fr; /* Text wider than image */
+  gap: 2rem; /* Gap between text and image */
   align-items: center;
 }
 
@@ -102,13 +102,15 @@ h2 {
   justify-content: center;
 }
 
+/* Move image more to the left */
 .about-image {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Move image to start of its column */
 }
 
 .image-placeholder {
   width: 100%;
+  max-width: 280px; /* optional: shrink image a bit if needed */
   height: 320px;
   border-radius: 18px;
   background: linear-gradient(135deg, #1f2933, #111827);
