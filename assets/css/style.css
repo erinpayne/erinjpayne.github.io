@@ -135,3 +135,44 @@ h2 {
 .project-image .image-placeholder {
   height: 260px;
 }
+
+/*HMMM*/
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* image left, text right */
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: flex-start; /* image on left */
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;  /* adjust size as needed */
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr; /* stack image on top */
+    text-align: center;
+  }
+
+  .about-image {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+}
