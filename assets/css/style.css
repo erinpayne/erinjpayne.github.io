@@ -89,10 +89,11 @@ h2 {
 }
 
 /* PHOTO */
+/* PHOTO SECTION */
 .about-section {
   display: grid;
-  grid-template-columns: 1.7fr 1fr; /* Text wider than image */
-  gap: 2rem; /* Gap between text and image */
+  grid-template-columns: 2fr 0.8fr; /* Text wider, image narrower */
+  gap: 2rem; /* Space between text and image */
   align-items: center;
 }
 
@@ -102,16 +103,17 @@ h2 {
   justify-content: center;
 }
 
-/* Move image more to the left */
 .about-image {
   display: flex;
-  justify-content: flex-start; /* Move image to start of its column */
+  justify-content: flex-start; /* Align image to left of its column */
+  /* Optional: pull it slightly over the text column */
+  margin-left: -20px; 
 }
 
 .image-placeholder {
   width: 100%;
-  max-width: 280px; /* optional: shrink image a bit if needed */
   height: 320px;
+  max-width: 280px; /* Keep image from stretching too much */
   border-radius: 18px;
   background: linear-gradient(135deg, #1f2933, #111827);
   display: flex;
