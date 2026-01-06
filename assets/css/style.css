@@ -91,30 +91,22 @@ h2 {
 /* PHOTO */
 .about-section {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* image left, text right */
+  grid-template-columns: 1fr 2fr;
   gap: 4rem;
   align-items: center;
 }
 
-.about-image {
-  display: flex;
-  justify-content: flex-start; /* left-align image */
-}
-
 .image-placeholder {
   width: 100%;
-  max-width: 400px;  /* adjust size */
-  height: auto;      /* keep aspect ratio */
-  border-radius: 18px;
-  display: block;
-}
-
-.about-text {
+  height: 320px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1f2933, #111827);
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  color: #6b7280;
+  font-size: 0.9rem;
 }
-
 
 /* PROJECT PHOTO */
 
