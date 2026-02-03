@@ -1,67 +1,60 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erin Payne | Engineering Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Erin Payne | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="pfp.png" type="image/png">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">ERIN PAYNE</div>
-        <div class="nav-links">
-            <a href="index.html">Portfolio</a>
-            <a href="projects.html">Projects</a>
-            <a href="experience.html">Experience</a>
-            <a href="about.html">Contact</a>
-        </div>
-    </nav>
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Portfolio</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="badge">Mechatronics & Aerospace Avionics</span>
-            <h1>Engineering solutions that <br><em>define the future.</em></h1>
-            <p>Designing complex systems from robotics to avionics architecture.</p>
-            <a href="#work" class="btn-primary">View Projects</a>
-        </div>
-        
-        <div class="hero-logos">
-            <span>ROBOTICS</span>
-            <span>AVIONICS</span>
-            <span>SYSTEMS</span>
-            <span>CONTROL</span>
-        </div>
-    </header>
+<header class="hero">
+  <h1>Engineering Portfolio</h1>
+  <p>Mechatronics & Robotics Engineering · Queen's Aerospace Avionics Manager</p>
+</header>
 
-    <section id="work" class="feature-grid">
-        <div class="container">
-            <div class="grid-header">
-                <h2>Built to handle complexity</h2>
-                <div class="stats">
-                    <div class="stat-item"><span>SYSTEM UPTIME</span><strong>99.9%</strong></div>
-                    <div class="stat-item"><span>COMPLEXITY</span><strong>Level 5</strong></div>
-                </div>
-            </div>
+<section class="intro about-section">
+  <div class="about-text">
+    <p>
+      I am a Mechatronics and Robotics Engineering student at Queen’s University with
+      hands-on experience in aerospace avionics, systems integration, and
+      multidisciplinary engineering design. My work focuses on building reliable,
+      flight-ready systems through rigorous testing and iteration.
+    </p>
+  </div>
 
-            <div class="main-feature-card">
-                <div class="card-text">
-                    <h3>Advanced Robotics Systems</h3>
-                    <p>The fastest way to build, govern, and scale enterprise-grade mechatronics.</p>
-                    <ul class="feature-list">
-                        <li>High-fidelity simulations</li>
-                        <li>Autonomous pathfinding</li>
-                        <li>Kinematic modeling</li>
-                    </ul>
-                </div>
-                <div class="card-visual">
-                    <img src="pfp.png" alt="Project Visualization">
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="about-image">
+    <div class="image-placeholder">Your Photo</div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  document.querySelectorAll('.intro, h2').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = '1s ease';
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
+
