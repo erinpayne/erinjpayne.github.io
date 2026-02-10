@@ -41,6 +41,114 @@ nav {
 
 /* HERO */
 
+/* HERO – CENTERED LANDING */
+
+.hero-center {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  color: #38bdf8;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+.hero-description {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: #0f1117;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56,189,248,0.25);
+}
+
+.btn-secondary {
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Circular graphic placeholder */
+
+.hero-graphic {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, rgba(56,189,248,0.15), transparent 65%),
+    conic-gradient(from 0deg, #38bdf8, #0ea5e9, #38bdf8);
+  mask: radial-gradient(circle at center, transparent 55%, black 56%);
+  opacity: 0.9;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 .hero {
   padding: 7rem 4rem 4rem;
   animation: fadeUp 1s ease forwards;
