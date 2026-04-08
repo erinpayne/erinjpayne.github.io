@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kayla Payne</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'EB Garamond', serif;
-      background-color: #fefefe;
-      color: #222;
+      /* Priority given to Calibre, then Inter, then system sans-serif */
+      font-family: 'Calibre', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #000000; /* True Black Theme */
+      color: #ffffff;            /* Crisp White Text */
       line-height: 1.6;
       min-height: 100vh;
       margin: 0;
@@ -24,25 +26,26 @@
       justify-content: space-between;
       align-items: center;
       padding: 30px 60px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #222; /* Darker border for dark mode */
       max-width: 1200px;
       margin: 0 auto;
     }
     nav .name {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 3.0rem;
       margin-left: -40px;
+      letter-spacing: -0.02em; /* Modern tightening */
     }
     nav .links a {
       position: relative;
       margin-left: 30px;
       text-decoration: none;
       font-weight: 500;
-      color: #222;
+      color: #999; /* Muted links */
       font-size: 1.3rem;
       transition: color 0.4s;
     }
-    nav .links a:hover { color: #666; }
+    nav .links a:hover { color: #ffffff; }
     nav .links a::after {
       content: '';
       position: absolute;
@@ -50,7 +53,7 @@
       bottom: -3px;
       width: 0;
       height: 2px;
-      background-color: #666;
+      background-color: #ffffff;
       transition: width 0.4s ease;
       transform: translateX(-50%);
     }
@@ -71,16 +74,16 @@
       flex-direction: column;
       gap: 50px;
     }
-    .left-column h1 { font-size: 2.5rem; font-weight: 500; margin-bottom: 15px; }
-    .left-column h2 { font-size: 1.8rem; font-weight: 500; margin-bottom: 8px; }
-    .left-column p { font-size: 1.1rem; max-width: 450px; color: #333; }
+    .left-column h1 { font-size: 2.5rem; font-weight: 600; margin-bottom: 15px; }
+    .left-column h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 8px; }
+    .left-column p { font-size: 1.1rem; max-width: 450px; color: #cccccc; } /* Softened white for body */
     .left-column a {
       text-decoration: none;
-      color: #222; /* default same as body text */
-      font-weight: 500;
+      color: #ffffff; 
+      font-weight: 600;
       transition: color 0.2s;
     }
-    .left-column a:hover { color: #666; } /* grey only on hover */
+    .left-column a:hover { color: #999999; }
 
     .right-column {
       flex: 1 1 0;
@@ -114,10 +117,10 @@
 
     footer {
       text-align: center;
-      padding: 10px 0;
+      padding: 40px 0;
       font-size: 0.8rem;
-      color: #666;
-      border-top: 1px solid #ddd;
+      color: #444; /* Dimmed footer */
+      border-top: 1px solid #222;
       margin-top: 60px;
     }
   </style>
@@ -125,7 +128,7 @@
 <body>
 
   <nav>
-    <div class="name">Kayla Payne</div>
+    <div class="name">Erin Payne</div>
     <div class="links">
       <a href="index.html">About</a>
       <a href="projects.html">Projects</a>
