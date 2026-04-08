@@ -1,44 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Projects</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Erin Payne</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background-color: #fefefe;
+      color: #222;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      border-bottom: 1px solid #ddd;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav .name {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-left: -40px;
+    }
+
+    nav .links a {
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #222;
+      position: relative;
+      transition: color 0.4s;
+    }
+
+    nav .links a:hover { color: #666; }
+
+    nav .links a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background-color: #666;
+      transition: width 0.4s ease;
+      transform: translateX(-50%);
+    }
+
+    nav .links a:hover::after { width: 100%; }
+
+    .container {
+      max-width: 1200px;
+      margin: 70px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .content-row {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .left-column {
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .right-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .side-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 12px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 900px) {
+      nav .name {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .content-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .left-column {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <div>EP</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
-<div class="container">
-  <h2>Projects</h2>
-
-  <div class="card">
-    <h3>Mars Sample Return Rover</h3>
-    <p>
-      Autonomous rover with ROS2 navigation, SLAM localization, and hybrid path planning.
-      Designed intake system and validated control performance (~97%).
-    </p>
-    <div class="skills">
-      <span>ROS2</span><span>SLAM</span><span>Control</span>
+  <nav>
+    <div class="name">Erin Payne</div>
+    <div class="links">
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <img src="images/rover1.jpg">
+  </nav>
+
+  <div class="container">
+
+    <div class="content-row">
+      <div class="left-column">
+        <h1>Projects</h1>
+      </div>
+    </div>
+    
+    <div class="content-row">
+      <div class="left-column">
+        <h2>High Altitude Muon Detector</h2>
+        <p>
+          I led a team designing and building a muon detector to fly on a weather balloon at 30,000 m. The design was optimized from an MIT detector to minimize mass, volume, and power consumption while operating from 100 kPa to 1 kPa and temperatures from 25°C to −55°C. I developed software to store muon detection rate data as a function of altitude and oversaw circuitry design, Arduino coding, PCB assembly, scintillator assembly, testing, troubleshooting, and deployment, culminating in a successful launch in April 2024.
+        </p>
+      </div>
+
+      <div class="right-column">
+        <img src="muon_detector.jpeg" alt="High Altitude Muon Detector" class="side-image">
+      </div>
+    </div>
+
+    <div class="content-row">
+      <div class="left-column">
+        <h2>Lunar Rover Auxiliary Traction Mechanism</h2>
+        <p>
+          Mechanical and systems design of an auxiliary traction mechanism for a lunar rover, focusing on reliability in regolith, dimensional constraints, and integration with existing rover subsystems.
+        </p>
+      </div>
+
+      <div class="right-column">
+        <img src="lunar_rover_APSC103.jpg" alt="Lunar Rover Auxiliary Traction Mechanism" class="side-image">
+      </div>
+    </div>
+
+    <div class="content-row">
+      <div class="left-column">
+        <h2>European Space Agency Concurrent Engineering Workshop</h2>
+        <p>
+          Participated in a week-long Phase 0 mission feasibility study using ESA’s COMET tool as a member of the payload team. I researched high-TRL instruments, performed preliminary data-rate and field-of-view calculations, and collaborated within ESA’s concurrent design framework to optimize power, mass, and payload integration. The mission objectives included mapping Jupiter’s magnetosphere, imaging the Great Red Spot, and demonstrating solar sail technology.
+        </p>
+      </div>
+
+      <div class="right-column">
+        <img src="ESA_CEW_presenting.jpg" alt="ESA Concurrent Engineering Workshop" class="side-image">
+      </div>
+    </div>
+
   </div>
 
-  <div class="card">
-    <h3>VTOL Avionics Suite</h3>
-    <p>
-      Developing avionics for UAVs supporting urban fire mitigation missions.
-    </p>
-  </div>
-
-</div>
+  <footer>
+    © 2026 Erin Payne
+  </footer>
 
 </body>
 </html>
