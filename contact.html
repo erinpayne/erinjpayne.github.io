@@ -1,30 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Erin Payne</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background-color: #fefefe;
+      color: #222;
+      line-height: 1.6;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      border-bottom: 1px solid #ddd;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav .name {
+      font-weight: 500;
+      font-size: 3.0rem;
+      margin-left: -40px;
+    }
+    nav .links a {
+      position: relative;
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #222;
+      font-size: 1.3rem;
+      transition: color 0.4s;
+    }
+    nav .links a:hover { color: #666; }
+    nav .links a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background-color: #666;
+      transition: width 0.4s ease;
+      transform: translateX(-50%);
+    }
+    nav .links a:hover::after { width: 100%; }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 60px auto;
+      gap: 60px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .left-column {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .left-column h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    .left-column p,
+    .left-column li {
+      font-size: 1.1rem;
+      color: #333;
+      list-style: none;
+    }
+    .left-column ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-left: 0;
+    }
+    .left-column a {
+      color: #222;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .left-column a:hover {
+      color: #666;
+      border-bottom: 1px solid #666;
+    }
+
+    .right-column {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+      .left-column {
+        align-items: center;
+        text-align: center;
+      }
+      nav .name { margin-left: 0; text-align: center; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.8rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <div>EP</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
+  <nav>
+    <div class="name">Erin Payne</div>
+    <div class="links">
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="left-column">
+      <h1>Contact</h1>
+      <ul>
+        <li>Email: <a href="mailto:23fnk4@queensu.ca">23fnk4queensu.ca</a></li>
+        <li><a href="https://www.linkedin.com/in/erin-payne3141" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div class="right-column">
+      <!-- Optional: icons, headshot, or short note -->
+    </div>
   </div>
-</nav>
 
-<div class="container">
-  <h2>Contact</h2>
-
-  <div class="card">
-    <p>Email: erin.payne.01@gmail.com</p>
-    <p>Website: erinjpayne.com</p>
-  </div>
-
-</div>
+  <footer>
+    <p>© 2026 Erin Payne</p>
+  </footer>
 
 </body>
 </html>
