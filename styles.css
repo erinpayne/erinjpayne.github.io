@@ -1,88 +1,126 @@
-body {
-  margin: 0;
-  background: #0d0d0d;
-  color: #eaeaea;
-  font-family: 'Inter', sans-serif;
+/* Import modern, high-legibility font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-color: #050505;          /* Deep obsidian black */
+  --card-bg: #111111;           /* Slightly lighter charcoal */
+  --text-main: #f2f2f2;         /* Off-white for better readability */
+  --text-muted: #888888;        /* Soft grey for secondary info */
+  --accent: #3b82f6;            /* Modern blue accent */
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display&display=swap');
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
+/* Nav - Ultra-clean glass effect */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  align-items: center;
+  padding: 15px 40px;
   position: fixed;
+  top: 0;
   width: 100%;
-  background: rgba(13,13,13,0.85);
-  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  background: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
 }
 
 nav a {
-  color: #aaa;
+  color: var(--text-muted);
   text-decoration: none;
   margin-left: 25px;
   font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #fff;
+  color: var(--text-main);
 }
 
+/* Layout */
 .container {
-  padding: 120px 40px 60px;
-  max-width: 1000px;
+  padding: 140px 40px 60px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Typography - Switched to Modern Sans for all */
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: clamp(40px, 8vw, 72px); /* Responsive sizing */
+  line-height: 1.1;
 }
 
 h2 {
   font-size: 32px;
-  margin-bottom: 20px;
+  color: var(--text-main);
 }
 
+/* Cards - Added subtle depth */
 .card {
-  background: #161616;
-  padding: 25px;
-  margin-top: 20px;
-  border: 1px solid #222;
-  transition: 0.3s;
+  background: var(--card-bg);
+  padding: 32px;
+  margin-top: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
-  border-color: #444;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
 }
 
+/* Buttons - Modern "Pill" style */
 .btn {
   display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid #fff;
-  color: #fff;
+  padding: 12px 24px;
+  background: var(--text-main);
+  color: var(--bg-color);
+  border-radius: 6px;
+  font-weight: 600;
   text-decoration: none;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
 }
 
 .btn:hover {
-  background: #fff;
-  color: #000;
+  opacity: 0.9;
 }
 
+/* Skills/Tags - Minimalist bubbles */
 .skills span {
-  border: 1px solid #333;
-  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
   margin: 4px;
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
+  border-radius: 100px;
+  color: var(--text-muted);
 }
 
 img {
-  max-width: 200px;
-  margin-top: 10px;
-  border: 1px solid #333;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid var(--border);
 }
