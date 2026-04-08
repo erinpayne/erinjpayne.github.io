@@ -1,213 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Erin Payne — Engineering Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono&family=Playfair+Display&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  background: #f5f3ee;
-  color: #1a1916;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  position: fixed;
-  width: 100%;
-  background: rgba(245,243,238,0.9);
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  margin-left: 20px;
-  font-family: 'DM Mono';
-  font-size: 13px;
-}
-
-.hero {
-  padding: 120px 40px 60px;
-  max-width: 900px;
-}
-
-.hero h1 {
-  font-size: 60px;
-  font-family: 'Playfair Display', serif;
-}
-
-.hero p {
-  color: #666;
-  max-width: 500px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid #111;
-  margin-top: 20px;
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.section {
-  padding: 60px 40px;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-}
-
-.project {
-  background: white;
-  padding: 25px;
-  margin-top: 20px;
-}
-
-.skills span {
-  border: 1px solid #ccc;
-  padding: 3px 8px;
-  margin: 3px;
-  display: inline-block;
-  font-size: 11px;
-}
-
-.exp {
-  margin-top: 25px;
-}
-
-.exp-title {
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.exp-sub {
-  font-size: 12px;
-  color: #888;
-}
-
-img {
-  max-width: 200px;
-  margin-top: 10px;
-  border: 1px solid #ddd;
-}
-</style>
+<title>Erin Payne</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <nav>
   <div>EP</div>
   <div>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
+<div class="container">
   <h1>Building systems that fly</h1>
-  <p>
-    Mechatronics & Robotics Engineering student at Queen’s University.
-    Focused on avionics, autonomous systems, and flight control.
-  </p>
+  <p>Avionics • Autonomous Systems • Robotics</p>
 
-  <a href="#projects" class="btn">View Projects</a>
-  <a href="https://erinjpayne.com" target="_blank" class="btn">Personal Website</a>
-</div>
-
-<!-- PROJECTS -->
-<div id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Mars Sample Return Rover</h3>
-    <p>
-      Developed an autonomous rover integrating ROS2-based navigation, SLAM localization, and hybrid A*/TEB path planning.
-      Designed a passive roller-scooper intake mechanism and implemented PI-based velocity control achieving ~97% accuracy.
-    </p>
-    <div class="skills">
-      <span>ROS2</span><span>SLAM</span><span>Path Planning</span><span>Control</span>
-    </div>
-
-    <!-- ADD YOUR PHOTOS -->
-    <img src="images/rover1.jpg">
-    <img src="images/rover2.jpg">
-  </div>
-
-  <div class="project">
-    <h3>VTOL Avionics Suite (QADT)</h3>
-    <p>
-      Leading avionics development for multiple UAVs supporting urban firefighting missions.
-      Includes power systems, GPS integration, and flight control systems.
-    </p>
-  </div>
-
-  <div class="project">
-    <h3>6-DOF Stewart Platform</h3>
-    <p>
-      Designed and built a full hexapod system with embedded control and multi-axis motion.
-    </p>
-  </div>
-
-</div>
-
-<!-- CLASS PROJECTS -->
-<div class="section">
-  <h2>Class Projects</h2>
-
-  <div class="project">
-    <h3>Autonomous Systems Design (MREN)</h3>
-    <p>
-      Focused on system integration including sensing, control, and embedded systems under real-world constraints.
-      Emphasized debugging, testing, and performance validation.
-    </p>
-  </div>
-</div>
-
-<!-- EXPERIENCE -->
-<div id="experience" class="section">
-  <h2>Experience</h2>
-
-  <div class="exp">
-    <div class="exp-title">Avionics Manager</div>
-    <div class="exp-sub">May 2025 – Present</div>
-    <ul>
-      <li>Lead a team of 10+ engineers developing avionics for VTOL and quadcopter UAVs.</li>
-      <li>Design systems for urban fire mitigation including reconnaissance and payload deployment.</li>
-      <li>Conduct flight testing and analyze telemetry and logs.</li>
-      <li>Manage procurement, cost tracking, and system integration.</li>
-    </ul>
-    <p><strong>AEAC 2026:</strong> Urban Fire Mitigation</p>
-  </div>
-
-  <div class="exp">
-    <div class="exp-title">Electronics Team Member</div>
-    <div class="exp-sub">Oct 2024 – May 2025</div>
-    <ul>
-      <li>Integrated GPS, cameras, and Pixhawk systems.</li>
-      <li>Performed PID tuning and flight data analysis.</li>
-      <li>Enabled autonomous missions using QGroundControl.</li>
-    </ul>
-    <p><strong>AEAC 2025:</strong> Wildfire Detection & Suppression</p>
-  </div>
-
-</div>
-
-<!-- CONTACT -->
-<div id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: erin.payne.01@gmail.com</p>
-  <p>Website: erinjpayne.com</p>
+  <a href="projects.html" class="btn">View Work</a>
+  <a href="https://erinjpayne.com" target="_blank" class="btn">Personal Site</a>
 </div>
 
 </body>
