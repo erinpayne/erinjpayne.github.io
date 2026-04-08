@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  background: #0d0d0d;
+  color: #eaeaea;
+  font-family: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  background: rgba(13,13,13,0.85);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.container {
+  padding: 120px 40px 60px;
+  max-width: 1000px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #161616;
+  padding: 25px;
+  margin-top: 20px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #444;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.skills span {
+  border: 1px solid #333;
+  padding: 4px 8px;
+  margin: 4px;
+  display: inline-block;
+  font-size: 11px;
+}
+
+img {
+  max-width: 200px;
+  margin-top: 10px;
+  border: 1px solid #333;
+}
