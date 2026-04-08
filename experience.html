@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Additional Experience – Erin Payne</title>
+  <title>Experience – Erin Payne</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -12,8 +12,8 @@
 
     body {
       font-family: 'EB Garamond', serif;
-      background-color: #fefefe;
-      color: #222;
+      background-color: #fefefe; 
+      color: #222;            
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -23,21 +23,17 @@
       justify-content: space-between;
       align-items: center;
       padding: 30px 60px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #ddd; 
       max-width: 1200px;
       margin: 0 auto;
     }
-    nav .name {
-      font-weight: 500;
-      font-size: 3.0rem;
-      margin-left: -40px;
-    }
+    nav .name { font-weight: 500; font-size: 3.0rem; margin-left: -40px; }
     nav .links a {
       position: relative;
       margin-left: 30px;
       text-decoration: none;
       font-weight: 500;
-      color: #222;
+      color: #222; 
       font-size: 1.3rem;
       transition: color 0.4s;
     }
@@ -56,99 +52,69 @@
     nav .links a:hover::after { width: 100%; }
 
     .container {
-      display: flex;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 60px auto;
-      gap: 80px;
-      padding: 0 20px;
-      flex-wrap: wrap;
-    }
-
-    .left-column {
-      flex: 1 1 0;
+      padding: 0 40px;
       display: flex;
       flex-direction: column;
-      gap: 45px;
+      gap: 60px;
     }
 
     .section h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 500;
-      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      color: #111;
     }
 
     .section h2 {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 6px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #111;
     }
 
-    .section h3 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #555;
+    .exp-item { margin-bottom: 40px; }
+    
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
       margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
-    .section p,
-    .section li {
-      font-size: 1.1rem;
-      color: #333;
-      max-width: 600px;
+    .exp-role { font-size: 1.3rem; font-weight: 600; color: #222; }
+    .exp-date { font-size: 1.1rem; color: #777; }
+
+    .section p, .section li {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 15px;
     }
 
     .section ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding-left: 0;
+      list-style-type: disc;
+      padding-left: 20px;
     }
 
-    .right-column {
-      flex: 0.7 1 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      color: #aaa;
-      font-size: 1.1rem;
-      text-align: center;
-    }
+    .skill-category { margin-bottom: 20px; }
+    .skill-category b { font-size: 1.2rem; color: #111; display: block; margin-bottom: 5px; }
 
     footer {
       text-align: center;
-      padding: 10px 0;
-      font-size: 0.8rem;
-      color: #666;
+      padding: 40px 0;
+      font-size: 0.9rem;
+      color: #888;
       border-top: 1px solid #ddd;
       margin-top: 60px;
-    }
-
-    .side-image {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-      }
-      .left-column {
-        align-items: center;
-        text-align: center;
-      }
-      nav .name { margin-left: 0; }
     }
   </style>
 </head>
 
 <body>
-
   <nav>
     <div class="name">Erin Payne</div>
     <div class="links">
@@ -160,48 +126,65 @@
   </nav>
 
   <div class="container">
-    <div class="left-column">
+    <section class="section">
+      <h1>About</h1>
+      <p>I am an undergraduate in Mechatronics and Robotics Engineering at Queen’s University with a core focus on autonomous systems, GNC (Guidance, Navigation, and Control) architectures, and complex systems integration. My work bridges the gap between mechanical design and software autonomy, driven by a passion for advancing robotics in aerospace and high-stakes field environments.</p>
+    </section>
 
-      <div class="section">
-        <h1>Experience</h1>
+    <section class="section">
+      <h1>Experience</h1>
+      
+      <div class="exp-item">
+        <h2>Queen’s Aerospace Design Team</h2>
+        
+        <div class="exp-header">
+          <span class="exp-role">Avionics Manager</span>
+          <span class="exp-date">May 2025 – Present</span>
+        </div>
+        <p>Leading a multidisciplinary team of 10+ to develop flight-ready avionics systems for two fixed-wing VTOLs and a quadcopter. I oversee full systems integration—including component selection, procurement, and budget management—while architecting flight performance reviews using sensor data to optimize system-level reliability.</p>
+
+        <div class="exp-header">
+          <span class="exp-role">Simulation Team – Urban Fire Mitigation (ICUAS ’26)</span>
+          <span class="exp-date">Oct. 2025 – Present</span>
+        </div>
+        <p>Currently focused on the ICUAS 2026 competition simulation, working with Linux, GitHub, Docker, and ROS2 to develop autonomous indoor fire mitigation, equipment deployment, and reconnaissance capabilities.</p>
+
+        <div class="exp-header">
+          <span class="exp-role">Electronics & Power Systems – Wildfire Mitigation (AEAC ’25)</span>
+          <span class="exp-date">Oct. 2024 – Apr. 2025</span>
+        </div>
+        <p>Contributed to the design of carbon fiber fixed-wing and quadcopter drones for wildfire hotspot detection and water transport. I designed and integrated power distribution hardware, including a 12S 2P battery system with quick-swapping capabilities, and utilized LTSpice and Altium for PCB schematics.</p>
       </div>
 
-      <div class="section">
-        <h2>Queen's Aerospace Design Team</h2>
+      <div class="exp-item">
+        <h2>Additional Leadership</h2>
         <ul>
-          <li>Queen’s Space Engineering Team — Satellite CTO</li>
-          <li>Queen’s Space Engineering Team — Space School Manager</li>
-          <li>Queen’s Space Engineering Team — Space School Member</li>
-          <li>Queen’s Rocket Engineering Team — Payload Team Member</li>
+          <li><b>QUESST Inter-Faculty Relations Director (May 2025 – Dec. 2025):</b> Coordinated logistics and facilitated collaboration between faculty groups for a university-wide sustainability conference.</li>
+          <li><b>External Communication Committee – Queen’s Engineering Society (Oct. 2024 – Apr. 2025):</b> Developed collaborative relationships with engineering schools across Canada and internationally to exchange ideas regarding governance and effective service delivery.</li>
+          <li><b>Royal Canadian Marine Search and Rescue Volunteer (Apr. 2023 – Aug. 2024):</b> Trained in helm, navigation, and radio communication, supporting monthly maintenance on Falkins Class Type-1 fast response vessels and participating in technical sessions on meteorology and chart plotting.</li>
         </ul>
       </div>
+    </section>
 
-      <div class="section">
-        <h2>Teaching & Outreach</h2>
-        <ul>
-          <li>Instructor for high school science camps (cosmology, dark matter, coding)</li>
-          <li>Led multi-hour workshops on Python, NumPy, and data analysis</li>
-        </ul>
+    <section class="section">
+      <h1>Technical Skills</h1>
+      <div class="skill-category">
+        <b>Electrical & Software</b>
+        <p>Px4, QGroundControl, LTSpice, Arduino, soldering, C/C++, Python, Git, VHDL, Quartus Prime, Julia.</p>
       </div>
-
-      <div class="section">
-        <h2>Music & Community Engagement</h2>
-        <ul>
-          <li>Performs fiddle, violin, and bagpipes at community events</li>
-          <li>Experience performing solo and within ensembles</li>
-        </ul>
+      <div class="skill-category">
+        <b>Mechanical & Fabrication</b>
+        <p>SolidWorks, OnShape, FreeCAD, drafting, 3D Printing.</p>
       </div>
-
-    </div>
-
-    <div class="right-column">
-      <img src="QSET_team_photo.png" alt="QSET team photo" class="side-image">
-    </div>
+      <div class="skill-category">
+        <b>Platforms & Tools</b>
+        <p>MS Excel, MS Word, MS PowerPoint.</p>
+      </div>
+    </section>
   </div>
 
   <footer>
     <p>© 2026 Erin Payne</p>
   </footer>
-
 </body>
 </html>
