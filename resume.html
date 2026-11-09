@@ -1,37 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Resume</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Erin Payne</title>
+  <link rel="icon" href="favicon.png">
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    .bar { padding: 12px 16px; display: flex; gap: 16px; }
+    iframe { width: 100%; height: calc(100vh - 50px); border: none; }
+  </style>
 </head>
 <body>
-
-<nav>
-  <div>EP</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+  <div class="bar">
+    <a href="index.html">← Back</a>
+    <a href="resume.pdf" download>Download PDF</a>
   </div>
-</nav>
-
-<div class="container">
-  <h2>Experience</h2>
-
-  <div class="card">
-    <h3>Avionics Manager</h3>
-    <p>Lead UAV avionics development and system integration.</p>
-    <p><strong>AEAC 2026:</strong> Urban Fire Mitigation</p>
-  </div>
-
-  <div class="card">
-    <h3>Electronics Team Member</h3>
-    <p>Worked on UAV systems for wildfire detection and suppression.</p>
-    <p><strong>AEAC 2025:</strong> Wildfire Detection</p>
-  </div>
-
-</div>
-
+  <iframe src="resume.pdf"></iframe>
 </body>
 </html>
